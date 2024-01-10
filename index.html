@@ -89,9 +89,35 @@
     </center>
 </body>
 <audio id="myAudio">
-    <source src="https://cs1.mp3.pm/listen/532904/NXYwVEhKSzErakpKN2o0bnpiTTVaY3NFZi9KU241TU9ObWU4WGdVdm5nNW9Ub2NtTENOOHJLY3JRVEdkSi9YTGhmVzJXWDNyZ3NSTmtQVko1cCt2aThIMUozcXVHdE9YNWF4RmNNRk5SdDVwMmFZanM1RW04VzFHN1BXWTBFS1Q/Skazi_-_I_wish_Hit_and_run_version_(mp3.pm).mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+
+<script>
+    // Array of song URLs
+    var songUrls = [
+        "https://cs1.mp3.pm/listen/532904/NXYwVEhKSzErakpKN2o0bnpiTTVaY3NFZi9KU241TU9ObWU4WGdVdm5nNW9Ub2NtTENOOHJLY3JRVEdkSi9YTGhmVzJXWDNyZ3NSTmtQVko1cCt2aThIMUozcXVHdE9YNWF4RmNNRk5SdDVwMmFZanM1RW04VzFHN1BXWTBFS1Q/Skazi_-_I_wish_Hit_and_run_version_(mp3.pm).mp3"
+        // add more URLs as needed
+    ];
+
+    // Select a random song URL
+    var randomSongUrl = songUrls[Math.floor(Math.random() * songUrls.length)];
+
+    // Get the audio element
+    var audioElement = document.getElementById("myAudio");
+
+    // Create a new source element
+    var sourceElement = document.createElement("source");
+
+    // Set the source element's attributes
+    sourceElement.src = randomSongUrl;
+    sourceElement.type = "audio/mpeg";
+
+    // Add the source element to the audio element
+    audioElement.appendChild(sourceElement);
+
+    // Play the audio
+    audioElement.play();
+</script>
 
 <button id="playButton" style="width: 200px; height: 200px;">Play</button>
 
